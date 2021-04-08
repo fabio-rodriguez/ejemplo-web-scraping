@@ -11,15 +11,10 @@ page = requests.get(url, headers = headers)
 data = page.content
 
 soup = BeautifulSoup(data, 'lxml')
-
 lista_ofertas = soup.find_all('div', class_='result-info')
 
 for lista in lista_ofertas:
     a = lista.find('a')
-    texto_oferta = a.text
-    url_oferta = lista.find('href')
-    url_oferta = a['href']
-    print('Mi Titulo: ',texto_oferta)
-    print('Mi URL: ', url_oferta)    
-    print()
+    print('Title: ', a.text)
+    print('URL: ', a['href'])    
 
