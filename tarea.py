@@ -17,4 +17,5 @@ for lista in lista_ofertas:
     a = lista.find('a')
     print('Title: ', a.text)
     print('URL: ', a['href'])    
+    print()
 
