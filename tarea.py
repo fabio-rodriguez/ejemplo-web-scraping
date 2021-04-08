@@ -12,7 +12,6 @@ data = page.content
 
 soup = BeautifulSoup(data, 'lxml')
 
-#ofertas = soup.find('ul',class_='rows')
 lista_ofertas = soup.find_all('div', class_='result-info')
 
 for lista in lista_ofertas:
@@ -20,7 +19,7 @@ for lista in lista_ofertas:
     texto_oferta = a.text
     url_oferta = lista.find('href')
     url_oferta = a['href']
-    print('Titulo: ',texto_oferta)
-    print('URL: ', url_oferta)
+    print('Mi Titulo: ',texto_oferta)
+    print('Mi URL: ', url_oferta)    
     print()
 
