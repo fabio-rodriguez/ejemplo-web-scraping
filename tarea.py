@@ -20,7 +20,7 @@ for lista in lista_ofertas:
     texto_oferta = a.text
     url_oferta = lista.find('href')
     url_oferta = a['href']
-    print('Title: ',texto_oferta)
+    print('Titulo: ',texto_oferta)
     print('URL: ', url_oferta)
     print()
 
